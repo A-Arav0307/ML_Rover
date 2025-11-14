@@ -1,8 +1,7 @@
 path: Hammer     # folder containing images/ and labels/
-train: 
-val: 
+train: train
+val: train
 
 names:
   0: Hammer
   1: Pick
-  

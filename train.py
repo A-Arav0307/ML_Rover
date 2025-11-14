@@ -1,7 +1,12 @@
 from ultralytics import YOLO
+from yolosplitter import YoloSplitter
 
 def main():
     model = YOLO("yolov8n.pt")   # Options: yolov8s.pt, yolov8m.pt, yolov8l.pt
+
+    # ys = YoloSplitter(imgFormat=['.jpg'], labelFormat=['.txt'])
+    # df = ys.from_yolo_dir(input_dir="Hammer", ratio=(0.8, 0.2, 0.1)) # train, val, test ratio
+    # ys.save_split(output_dir="potholes_split") # Saves the split dataset with a data.yaml file
 
     model.train(
         data="dataset.yaml",      # path to your YAML
@@ -17,7 +22,7 @@ def main():
     print(metrics)
 
     # 4. Run inference on a sample image
-    result = model("Hammer\images\5fc43404-IMG_7862.JPG")   # replace with actual test image
+    result = model("test_image.JPG")   # replace with actual test image
     result[0].show()
 
     # 5. Export the model to ONNX format
