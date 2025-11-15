@@ -10,7 +10,7 @@ else:
     print("Using CPU")
 
 
-model = YOLO("training_results_weights/best.pt")
+model = YOLO("training_results/run1/weights/best.pt")
 
 
 result = model("test_image.JPG", device = device)   # replace with actual test image

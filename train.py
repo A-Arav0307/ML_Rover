@@ -18,10 +18,9 @@ def main():
         print("Using CPU")
 
 
-
     model.train(
         data="dataset.yaml",      # path to your YAML
-        epochs=5,                # adjust for your dataset
+        epochs=200,                # adjust for your dataset
         batch=16,
         imgsz=640,
         device=device,                  # GPU; change to 'cpu' if needed
