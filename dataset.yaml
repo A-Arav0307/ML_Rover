@@ -1,6 +1,6 @@
 path: Hammer     # folder containing images/ and labels/
-train: train
-val: train
+train: autosplit_train.txt
+val: autosplit_val.txt
 
 names:
   0: Hammer
